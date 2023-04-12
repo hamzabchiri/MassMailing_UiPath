@@ -80,7 +80,7 @@
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="MasterDT" />
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="maillist" />
-      <Variable x:TypeArguments="x:String" Default="C:\Users\hamza.bchiri\OneDrive - TUI\Desktop\Custumer Survey\Attachemts\" Name="Filepath" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\**********\" Name="Filepath" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -185,10 +185,10 @@
         </ActivityAction>
       </umab:OutlookApplicationCard.Body>
     </umab:OutlookApplicationCard>
-    <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="656.666666666667,80.6666666666667" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="C:\Users\hamza.bchiri\OneDrive - TUI\Desktop\Custumer Survey\Configuration.xlsx" />
+    <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="656.666666666667,80.6666666666667" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="C:\Users\hamza.bchiri\*********\Configuration.xlsx" />
     <ui:InvokeCode ContinueOnError="{x:Null}" Code="Array.ForEach(Directory.GetFiles(in_Dir),Sub(x)File.Delete(x))" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="656.666666666667,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Dir">C:\Users\hamza.bchiri\OneDrive - TUI\Desktop\Custumer Survey\Attachemts\</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Dir">C:\Users\***********\Attachemts\</InArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
     <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="Hi Hamza, &#xA;The satisafaction Survey has been send it to all the customer's in the excel list&#xA;thank you.&#xA;&#xA;Hamza BCHIRI&#xA;&#xA;TUI GROUP&#xA;TUI Musement&#xA;TUI Global Business Services&#xA;Hamza.bchiri@tui.com " DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="656.666666666667,303.333333333333" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="Customer's satisfaction survey" To="hamza.bchiri@tui.com">
